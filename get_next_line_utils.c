@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 18:30:53 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/09 18:52:10 by chmassa          ###   ########.fr       */
+/*   Updated: 2022/12/11 09:20:14 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strjoin(char *s1, char *s2)
 		str[i++] = s2[j++];
 	str[i] = '\0';
 	free(s1);
-//	free(s2);
 	return (str);
 }
 
@@ -70,7 +69,6 @@ char	*ft_strdup(char *s1)
 		}
 		str[i] = '\0';
 	}
-//	free(s1);
 	return (str);
 }
 

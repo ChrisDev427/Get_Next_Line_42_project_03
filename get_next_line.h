@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 12:38:39 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/09 12:09:38 by chmassa          ###   ########.fr       */
+/*   Updated: 2022/12/11 09:21:40 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 84
 
-
 # endif
-
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);

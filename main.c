@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 13:38:20 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/09 14:40:23 by chmassa          ###   ########.fr       */
+/*   Updated: 2022/12/10 11:37:11 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int main(void)
 {
-	int		fd = open("gnlTester/files/43_with_nl", O_RDONLY);;
+	int		fd = open("test.txt", O_RDONLY);;
 	int		i = 1;
 	char	*s;
 //	printf("%d\n", fd);
-	while (i <= 3)
+	while (i <= 18)
 	{
 		printf("\n----------- appel [%d] ---------------------------\n", i);
 		s = get_next_line(fd);
@@ -26,7 +26,7 @@ int main(void)
 		free(s);
 		i++;
 	}
-//	system ("leaks a.out");
+	system ("leaks a.out");
 
 	close(fd);
 	return (0);
