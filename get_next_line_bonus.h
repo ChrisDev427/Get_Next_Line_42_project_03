@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 12:38:39 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/11 16:50:50 by chmassa          ###   ########.fr       */
+/*   Created: 2022/12/12 14:59:16 by chmassa           #+#    #+#             */
+/*   Updated: 2022/12/12 15:07:11 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 84
 
 # endif
 
-char	*get_next_line_bonus(int fd);
+char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
 void	ft_strcpy(char *dst, const char *src);
-char	*ft_strjoin(char *s1, char *s2);
+void	ft_cut_after_nl(char *s);
+void	ft_read(char **s, char *saved, int fd);
+char	*ft_strjoin(char *s1, char *s2, int fr);
 char	*ft_strdup(char *s1);
 char	*ft_strchr(const char *s, int c);
 

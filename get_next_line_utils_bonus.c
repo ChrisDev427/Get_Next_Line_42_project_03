@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 18:30:53 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/11 16:09:40 by chmassa          ###   ########.fr       */
+/*   Created: 2022/12/12 14:58:24 by chmassa           #+#    #+#             */
+/*   Updated: 2022/12/12 15:09:34 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2, int fr)
 {
 	int		i;
 	int		j;
@@ -33,7 +33,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
-	free(s1);
+	if (fr == 1)
+		free(s1);
 	return (str);
 }
 
@@ -45,31 +46,6 @@ size_t	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-char	*ft_strdup(char *s1)
-{
-	char	*str;
-	int		i;
-	int		s1len;
-
-	i = 0;
-	s1len = 0;
-	while (s1[s1len])
-		s1len++;
-	str = malloc(sizeof(char) * (s1len + 1));
-	if (str == NULL)
-		return (NULL);
-	else
-	{
-		while (s1[i])
-		{
-			str[i] = s1[i];
-			i++;
-		}
-		str[i] = '\0';
-	}
-	return (str);
 }
 
 char	*ft_strchr(const char *s, int c)
