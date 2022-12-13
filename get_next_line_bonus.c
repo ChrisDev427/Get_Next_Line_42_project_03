@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:59:46 by chmassa           #+#    #+#             */
-/*   Updated: 2022/12/12 15:53:39 by chmassa          ###   ########.fr       */
+/*   Updated: 2022/12/13 09:33:43 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,7 @@ char	*get_next_line(int fd)
 	static char	saved[1024][BUFFER_SIZE + 1];
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
-	{
-		saved[fd][0] = 0;
 		return (NULL);
-	}
 	s = "";
 	if (*saved && ft_strchr(saved[fd], '\n'))
 	{
